@@ -1,6 +1,6 @@
 export function packageJson(version) {
   return JSON.stringify({
-    name: 'iconoir-preact',
+    name: '@attaditya/iconoir-preact',
     version,
     description: 'Preact library for Iconoir.',
     license: 'MIT',
@@ -34,6 +34,7 @@ export function packageJson(version) {
       },
     },
 
+    homepage: 'https://github.com/AttAditya/iconoir',
     main: './dist/cjs/index.js',
     module: './dist/esm/index.mjs',
     types: './dist/index.d.ts',
@@ -44,6 +45,13 @@ export function packageJson(version) {
     },
     devDependencies: {
       preact: '^10.0.0',
+    },
+    publishConfig: {
+      access: 'public',
+    },
+    repository: {
+      type: 'git',
+      url: 'git+https://github.com/AttAditya/iconoir.git',
     },
   }, null, 2);
 }
